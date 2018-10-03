@@ -3,22 +3,22 @@ package histogram;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Histogram {
+public class Histogram<T> {
 	
-	private final int[] data;
+	private final T[] data;
 
-	public Histogram(int[] data) {
+	public Histogram(T[] data) {
 		this.data = data;
 	}
 
-	public int[] getData() {
+	public T[] getData() {
 		return data;
 	}
 	
-	public Map<Integer,Integer> getHistogram() {
-		Map<Integer,Integer> histogram = new HashMap<Integer, Integer>();
+	public Map<T,Integer> getHistogram() {
+		Map<T,Integer> histogram = new HashMap<T, Integer>();
 		
-        for (int Key :data){
+        for (T Key :data){
         	histogram.put(Key,
         			histogram.containsKey(Key) ? histogram.get(Key)+1 : 1);
         }
