@@ -16,8 +16,9 @@ public class Kata2 {
         			histogram.containsKey(Key) ? histogram.get(Key)+1 : 1);
         }
         
-        for(int key: histogram.keySet()) System.out.println(key + " ==> " + histogram.get(key));
-
+        for(int key: histogram.keySet()) 
+        	System.out.println(key + " ==> " + histogram.get(key));
+        
 	}
 
 }
