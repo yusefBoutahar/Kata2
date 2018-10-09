@@ -10,8 +10,8 @@ public class Kata2 {
         Histogram histo = new Histogram(data);
         Map<String,Integer> histogr = histo.getHistogram();
         
-        for(String key: histogr.keySet()) 
-        	System.out.println(key + " ==> " + histogr.get(key));
+        
+        histogr.forEach((K,V)->System.out.println(K + " ==> " + V));
         
 	}
 
